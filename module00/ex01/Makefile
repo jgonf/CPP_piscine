@@ -8,7 +8,7 @@ DIR_SRCS	= ./
 DIR_OBJS	= objs/
 DIR_INC		= .
 
-F_SRCS		= main.cpp
+F_SRCS		= main.cpp contact.cpp
 SRCS		= $(addprefix $(DIR_SRCS), $(F_SRCS))
 
 OBJS		= $(addprefix $(DIR_OBJS), $(F_SRCS:.cpp=.o))
