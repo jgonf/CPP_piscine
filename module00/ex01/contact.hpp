@@ -15,9 +15,11 @@ class contact {
 		std::string	_underwear;
 		std::string	_secret;
 
+		void print_info(std::string str) const;
+
 	public:
 		contact(void);
-		void get_info(void);
+		void get_info(int index) const;
 		void init(void);
 		
 };
