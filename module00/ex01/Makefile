@@ -1,6 +1,6 @@
 NAME		= minitel
 
-CC			= clang++
+CC			= clang++-9
 CFLAGS		= -Werror -Wextra -Wall 
 RM			= rm -rf
 

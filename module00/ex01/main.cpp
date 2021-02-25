@@ -7,21 +7,22 @@ int main()
 	int		i;
 	std::string	input;
 	std::string	name;
-
+	contact		list_contact[8];
+	
 	i = 0;
 	input = "";
 	while (input != "EXIT")
 	{
-		std::cin >> input;
+//		std::cin.ignore();
+		getline(std::cin, input);
 		if (input == "ADD")
 		{
 			if (i > 8)
-				std::cout << "Vous n'avez plus de place pour un nouveau contact\n";
+				std::cout << "Vous n'avez plus de place pour un nouveau contact" << std::endl;
 			else
 			{
-				std::getline(std::cin, name);
-				contact name;
-				std::cout << name.f_name;
+				list_contact[i].init();
+				list_contact[i].get_info();
 				i++;
 			}
 		}
