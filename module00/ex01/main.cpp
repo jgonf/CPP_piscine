@@ -1,12 +1,38 @@
 #include "phonebook.hpp"
 
-int main()
+void	set_search_function(contact list_contact[], int i)
+{
+	int	j;
+	int	index;
+	std::string	tmp;
+
+	j = 0;
+	while (j < i)
+	{
+		list_contact[j].get_info(j);
+		j++;
+	}
+	std::cout << "Quel contact voulez-vous afficher (donner l'index)" << std::endl;
+	getline(std::cin, tmp);
+	index = (int)(tmp.at(0) - 48);
+	if (index < 0 || index >= i)
+		std::cout << "Ce n'est pas un contact" << std::endl;
+	else
+	{
+		j = 0;
+		while (j < i)
+		{
+			list_contact[j].get_all();
+			j++;
+		}
+	}
+
+}
+
+int	main()
 {
 	int		i;
-	int		j;
-	int		index;
 	std::string	input;
-	std::string	name;
 	contact		list_contact[8];
 
 	i = 0;
@@ -25,19 +51,6 @@ int main()
 			}
 		}
 		if (input == "SEARCH")
-		{
-			j = 0;
-			while (j < i)
-			{
-				list_contact[j].get_info(j);
-				j++;
-			}
-			std::cout << "Quel contact voulez-vous afficher (donner l'index)" << std::endl;
-			std::string tmp;
-			getline(std::cin, tmp);
-			index = (int)(tmp.at(0) - 48);
-			if (index < 0 || index >= i)
-				std::cout << "Ce n'est pas un contact" << std::endl;
-		}
+			set_search_function(list_contact, i);
 	}
 }

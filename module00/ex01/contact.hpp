@@ -21,6 +21,7 @@ class contact {
 		contact(void);
 		void get_info(int index) const;
 		void init(void);
+		void get_all(void) const;
 		
 };
 #endif

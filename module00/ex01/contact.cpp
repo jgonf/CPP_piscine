@@ -2,6 +2,21 @@
 
 contact::contact(void) {}
 
+void	contact::get_all(void) const
+{
+	std::cout << this->_f_name << std::endl;
+	std::cout << this->_l_name << std::endl;
+	std::cout << this->_nickname << std::endl;
+	std::cout << this->_login << std::endl;
+	std::cout << this->_address << std::endl;
+	std::cout << this->_email << std::endl;
+	std::cout << this->_phone << std::endl;
+	std::cout << this->_birthday << std::endl;
+	std::cout << this->_meal << std::endl;
+	std::cout << this->_underwear << std::endl;
+	std::cout << this->_secret << std::endl;
+}
+
 void	contact::print_info(std::string str) const
 {
 	if (str.size() <= 10)
@@ -54,7 +69,6 @@ void	contact::init(void)
 	std::getline(std::cin, var);
 	this->_meal = var;
 	std::cout << "Underwear Color :" << std::endl;
-	std::cin.ignore();
 	std::getline(std::cin, var);
 	this->_underwear = var;
 	std::cout << "Darkest Secret :" << std::endl;
