@@ -18,15 +18,7 @@ void	set_search_function(contact list_contact[], int i)
 	if (index < 0 || index >= i)
 		std::cout << "Ce n'est pas un contact" << std::endl;
 	else
-	{
-		j = 0;
-		while (j < i)
-		{
-			list_contact[j].get_all();
-			j++;
-		}
-	}
-
+		list_contact[index].get_all();
 }
 
 int	main()
@@ -51,6 +43,12 @@ int	main()
 			}
 		}
 		if (input == "SEARCH")
-			set_search_function(list_contact, i);
+		{
+			if (i != 0)
+				set_search_function(list_contact, i);
+			else
+				std::cout << "Votre annuaire est vide." << std::endl;
+		}
+
 	}
 }
