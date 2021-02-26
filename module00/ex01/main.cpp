@@ -31,6 +31,7 @@ int	main()
 	input = "";
 	while (input != "EXIT")
 	{
+		std::cout << "Que voulez-vous faire ? (ADD, SEARCH ou EXIT)" << std::endl;
 		getline(std::cin, input);
 		if (input == "ADD")
 		{

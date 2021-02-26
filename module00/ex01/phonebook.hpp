@@ -5,6 +5,6 @@
 # include <iomanip>
 # include <string.h>
 # include <stdlib.h>
-# include "contact.hpp"
+# include "ClassContact.hpp"
 
 #endif

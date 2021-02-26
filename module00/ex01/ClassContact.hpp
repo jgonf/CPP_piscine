@@ -1,5 +1,5 @@
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#ifndef CLASSCONTACT_HPP
+# define CLASSCONTACT_HPP
 
 class contact {
 	private:
