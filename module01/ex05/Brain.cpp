@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/27 17:43:49 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/02/28 20:59:11 by jgonfroy         ###   ########.fr       */
+/*   Created: 2021/02/28 21:18:06 by jgonfroy          #+#    #+#             */
+/*   Updated: 2021/02/28 22:08:34 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Brain.hpp"
 
-# include <iostream>
-
-class Zombie {
-	private:
-		std::string	_name;
-		std::string	_type;
-
-	public:
-		Zombie(void);
-		~Zombie(void);
-		void set_name(std::string name);
-		void set_type(std::string type);
-		void announce(void) const;
-};
-
-#endif
+std::string	Brain::identify(void) const
+{
+	(void)_nb_cell;
+	std::ostringstream address;
+	address << (void const *)this;
+	return (address.str());
+}

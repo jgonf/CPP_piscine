@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Human.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/27 17:43:49 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/02/28 20:59:11 by jgonfroy         ###   ########.fr       */
+/*   Created: 2021/02/28 21:45:40 by jgonfroy          #+#    #+#             */
+/*   Updated: 2021/02/28 22:45:56 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Human.hpp"
 
-# include <iostream>
+	Human::Human(void)
+{}
 
-class Zombie {
-	private:
-		std::string	_name;
-		std::string	_type;
+Brain const	&Human::getBrain(void) const
+{
+	return (_brain);
+}
 
-	public:
-		Zombie(void);
-		~Zombie(void);
-		void set_name(std::string name);
-		void set_type(std::string type);
-		void announce(void) const;
-};
-
-#endif
+std::string	Human::identify(void) const
+{
+	return (_brain.identify());
+}
