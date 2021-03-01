@@ -1,14 +1,14 @@
-NAME		= pony
+NAME		= ex04
 
 CC			= clang++-9
-CFLAGS		= -Werror -Wextra -Wall 
+CFLAGS		= -Werror -Wextra -Wall
 RM			= rm -rf
 
 DIR_SRCS	= ./
 DIR_OBJS	= objs/
 DIR_INC		= .
 
-F_SRCS		= main.cpp Pony.cpp
+F_SRCS		= ex04.cpp
 SRCS		= $(addprefix $(DIR_SRCS), $(F_SRCS))
 
 OBJS		= $(addprefix $(DIR_OBJS), $(F_SRCS:.cpp=.o))

@@ -1,14 +1,14 @@
-NAME		= pony
+NAME		= zombies
 
 CC			= clang++-9
-CFLAGS		= -Werror -Wextra -Wall 
+CFLAGS		= -Werror -Wextra -Wall
 RM			= rm -rf
 
 DIR_SRCS	= ./
 DIR_OBJS	= objs/
 DIR_INC		= .
 
-F_SRCS		= main.cpp Pony.cpp
+F_SRCS		= Zombie.cpp ZombieEvent.cpp main.cpp
 SRCS		= $(addprefix $(DIR_SRCS), $(F_SRCS))
 
 OBJS		= $(addprefix $(DIR_OBJS), $(F_SRCS:.cpp=.o))
@@ -34,4 +34,4 @@ fclean:		clean
 
 re:		fclean all
 
-.PHONY:     all re clean fclean
+.PHONY:     all re clean fclean 

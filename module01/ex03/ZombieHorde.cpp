@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/28 10:19:59 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/02/28 16:22:00 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/01 11:24:50 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
 
 std::string	ZombieHorde::_rand_name(void) const
 {
-	int index = (rand() % 11);	
+	int index = (rand() % 11);
 	std::string name[11] = {"Joel", "Ellie", "Tess", "Tommy", "Marlene", "Riley", "Abby", "Dina", "Lev", "Yara", "Jesse"};
 
 	return (name[index]);
@@ -40,7 +40,7 @@ std::string	ZombieHorde::_rand_name(void) const
 
 std::string	ZombieHorde::_rand_type(void) const
 {
-	int index = (rand() % 6);	
+	int index = (rand() % 6);
 	std::string type[6] = {"Runners", "Stalkers", "Clickers", "Bloaters", "Shamblers", "The Rat King"};
 
 	return (type[index]);
