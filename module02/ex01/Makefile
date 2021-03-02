@@ -1,6 +1,6 @@
 NAME		= fixed
 
-CC		= clang++-9
+CC		= clang++
 CFLAGS		= -Werror -Wextra -Wall
 RM		= rm -rf
 

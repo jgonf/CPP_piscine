@@ -6,21 +6,21 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:28:30 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/01 23:26:01 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/02 09:15:55 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "FragTrap.hpp"
 
-	FragTrap::FragTrap(void): _hit(100), _max_hit(100), _energy(100),
-_max_energy(100), _lvl(1), _melee(30), _ranged(20), _armor(5), _name("Angel")
+	FragTrap::FragTrap(void): _name("Marcel")
 {
+	srand(time(NULL));
 	std::cout << "Are... are you my father?" << std::endl;
 }
 
-	FragTrap::FragTrap(std::string name): _hit(100), _max_hit(100), _energy(100),
-_max_energy(100), _lvl(1), _melee(30), _ranged(20), _armor(5), _name(name)
+	FragTrap::FragTrap(std::string name): _name(name)
 {
+	srand(time(NULL));
 	std::cout << "Claptrap -- start bootup sequence" << std::endl;
 }
 
@@ -89,3 +89,17 @@ void	FragTrap::beRepaired(unsigned int amount)
 		std::cout << "Feel better? You now have " << _hit << " hit points" << std::endl;
 }
 
+void	FragTrap::vaulthunter_dot_exe(std::string const &target)
+{
+	std::string list_attack[5] = {"Senseless Sacrifice", "Shhhh.... Trap!", "Miniontrap", "Laser Inferno", "Clap-In-The-Box"};
+
+ 	std::cout << "This time it'll be awesome, I promise!" << std::endl;
+	if (_energy < 25)
+	{
+		std::cout << "Oh no! I'm out of energy. Next time it'll be awesome, I promise!" << std::endl;
+		return ;
+	}
+	std::cout << "FR4G-TP " << _name << " did a spectacular " << list_attack[rand() % 5] << " attacks on " << target;
+	std::cout << " causing " << rand() % 40 << " points of damage!" << std::endl;
+	_energy -= 25;
+}

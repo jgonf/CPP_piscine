@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:13:17 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/01 22:37:16 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/02 09:48:18 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,9 @@
 #define FRAGTRAP_HPP
 
 # include <iostream>
+# include "ClapTrap.hpp"
 
-class FragTrap {
-
-	private:
-		unsigned int	_hit;
-		unsigned int	_max_hit;
-		unsigned int	_energy;
-		unsigned int	_max_energy;
-		unsigned int	_lvl;
-		unsigned int	_melee;
-		unsigned int	_ranged;
-		unsigned int	_armor;
-		std::string	_name;
-
+class FragTrap : public ClapTrap {
 	public:
 		FragTrap(std::string name);
 		FragTrap(void);
@@ -35,10 +24,7 @@ class FragTrap {
 		~FragTrap(void);
 		FragTrap & operator=(FragTrap const &src);
 
-		void	rangedAttack(std::string const & target);
-		void	meleeAttack(std::string const & target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+		void	vaulthunter_dot_exe(std::string const &target);
 };
 
 #endif

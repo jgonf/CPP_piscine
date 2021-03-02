@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 15:44:13 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/01 15:51:41 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/02 07:30:22 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,10 @@ int	main(void) {
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;
 
+
+
+	std::cout << std::endl << "My test:" << std::endl;
+	a.setRawBits(5);
+	std::cout << a.getRawBits() << std::endl;
 	return 0;
 }

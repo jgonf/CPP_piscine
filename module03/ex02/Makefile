@@ -1,4 +1,4 @@
-NAME		= fixed
+NAME		= fragtrap
 
 CC		= clang++
 CFLAGS		= -Werror -Wextra -Wall
@@ -8,7 +8,7 @@ DIR_SRCS	= ./
 DIR_OBJS	= objs/
 DIR_INC		= .
 
-F_SRCS		= Fixed.cpp main.cpp
+F_SRCS		= FragTrap.cpp ScavTrap.cpp ClapTrap.cpp main.cpp
 SRCS		= $(addprefix $(DIR_SRCS), $(F_SRCS))
 
 OBJS		= $(addprefix $(DIR_OBJS), $(F_SRCS:.cpp=.o))
