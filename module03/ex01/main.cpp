@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 21:36:56 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 09:19:09 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/02 16:12:45 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ int main()
 	ScavTrap janedoe;
 	ScavTrap vaness("Vaness");
 	ScavTrap gregory(janedoe);
-	vaness.rangedAttack("the next exercice.");
-	gregory.meleeAttack("the next one who ask for fun.");
+	vaness.rangedAttack("the next exercice");
+	gregory.meleeAttack("the next one who ask for fun");
 	vaness.takeDamage(4);
 	vaness.takeDamage(8);
 	vaness.beRepaired(15);

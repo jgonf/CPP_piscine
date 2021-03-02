@@ -6,19 +6,19 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:28:30 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 09:47:53 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/02 15:47:27 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "FragTrap.hpp"
 
-	FragTrap::FragTrap(void): _name("Marcel")
+	FragTrap::FragTrap(void): ClapTrap(100, 100, 100, 100, 1, 30, 20, 5, "Marcel")
 {
 	srand(time(NULL));
 	std::cout << "Are... are you my father?" << std::endl;
 }
 
-	FragTrap::FragTrap(std::string name): _name(name)
+	FragTrap::FragTrap(std::string name): ClapTrap(100, 100, 100, 100, 1, 30, 20, 5, name)
 {
 	srand(time(NULL));
 	std::cout << "Claptrap -- start bootup sequence" << std::endl;
@@ -48,6 +48,16 @@ FragTrap	& FragTrap::operator=(FragTrap const &src)
 	_name = src._name;
 
 	return *this;
+}
+
+void	FragTrap::rangedAttack(std::string const & target)
+{
+	std::cout << "FR4G-TP " << _name << " attacks " << target << " at range, causing " << _ranged << " points of damage!" << std::endl;
+}
+
+void	FragTrap::meleeAttack(std::string const & target)
+{
+	std::cout << "FR4G-TP " << _name << " attacks " << target << " in a melee, causing " << _melee << " points of damage!" << std::endl;
 }
 
 void	FragTrap::vaulthunter_dot_exe(std::string const &target)

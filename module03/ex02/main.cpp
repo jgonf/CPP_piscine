@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 21:36:56 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 09:19:09 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/02 16:12:19 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
 	std::cout << std::endl << "Now that the presentation are done, let's fight!" << std::endl;
 	jdoe.rangedAttack("poor Tony");
 	tony.takeDamage(20);
-	tony.meleeAttack("John's mama");
+	angel.meleeAttack("John's mama");
 	marcel.meleeAttack("everyone around");
 	marcel.takeDamage(120);
 
@@ -39,7 +39,7 @@ int main()
 	jdoe.vaulthunter_dot_exe("God himself");
 	jdoe.vaulthunter_dot_exe("the creator of this repetitive project");
 	jdoe.vaulthunter_dot_exe("the life, the universe and everything");
-	tony.vaulthunter_dot_exe("broken coffee machine");
+	angel.vaulthunter_dot_exe("broken coffee machine");
 	jdoe.vaulthunter_dot_exe("syntax error");
 	jdoe.vaulthunter_dot_exe("his ex");
 
@@ -47,8 +47,8 @@ int main()
 	ScavTrap janedoe;
 	ScavTrap vaness("Vaness");
 	ScavTrap gregory(janedoe);
-	vaness.rangedAttack("the next exercice.");
-	gregory.meleeAttack("the next one who ask for fun.");
+	vaness.rangedAttack("the next exercice");
+	gregory.meleeAttack("the next one who ask for fun");
 	vaness.takeDamage(4);
 	vaness.takeDamage(8);
 	vaness.beRepaired(15);

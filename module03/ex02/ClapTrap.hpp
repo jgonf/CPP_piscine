@@ -6,12 +6,12 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:13:17 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 09:42:33 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/02 16:19:03 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 # include <iostream>
 
@@ -29,14 +29,16 @@ class ClapTrap {
 		std::string	_name;
 
 	public:
-		ClapTrap(std::string name);
 		ClapTrap(void);
+
+		ClapTrap(unsigned int hit, unsigned int mhit, unsigned int nrj,
+unsigned int mnrj, unsigned int lvl, unsigned int melee, unsigned int ranged,
+unsigned int armor, std::string name);
+
 		ClapTrap(ClapTrap const &src);
 		~ClapTrap(void);
 		ClapTrap & operator=(ClapTrap const &src);
 
-		void	rangedAttack(std::string const & target);
-		void	meleeAttack(std::string const & target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 };

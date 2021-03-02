@@ -6,22 +6,34 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:28:30 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 09:39:47 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/02 16:19:22 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ClapTrap.hpp"
 
-	ClapTrap::ClapTrap(void): _name("ClapClap")
+	ClapTrap::ClapTrap(void)
 {
 	srand(time(NULL));
 	std::cout << "Default constructor." << std::endl;
 }
 
-	ClapTrap::ClapTrap(std::string name): _name(name)
+	ClapTrap::ClapTrap(unsigned int hit, unsigned int mhit, unsigned int nrj,
+unsigned int mnrj, unsigned int lvl, unsigned int melee, unsigned int ranged,
+unsigned int armor, std::string name)
 {
 	srand(time(NULL));
 	std::cout << "Constructor by initialisation" << std::endl;
+
+	_hit = hit;
+	_max_hit = mhit;
+	_energy = nrj;
+	_max_energy = mnrj;
+	_lvl = lvl;
+	_melee = melee;
+	_ranged = ranged;
+	_armor = armor;
+	_name = name;
 }
 
 	ClapTrap::ClapTrap(ClapTrap const &src)
@@ -48,16 +60,6 @@ ClapTrap	& ClapTrap::operator=(ClapTrap const &src)
 	_name = src._name;
 
 	return *this;
-}
-
-void	ClapTrap::rangedAttack(std::string const & target)
-{
-	std::cout << "Big machine " << _name << " attacks " << target << " at range, causing " << _ranged << " points of damage!" << std::endl;
-}
-
-void	ClapTrap::meleeAttack(std::string const & target)
-{
-	std::cout << "Big machine " << _name << " attacks " << target << " in a melee, causing " << _melee << " points of damage!" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
