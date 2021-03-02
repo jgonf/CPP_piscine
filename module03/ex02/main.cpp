@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 21:36:56 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 16:12:19 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/02 17:17:11 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ int main()
 	vaness.takeDamage(8);
 	vaness.beRepaired(15);
 	vaness.challengeNewcomer("new comer");
+	janedoe.challengeNewcomer("newest comer");
+	janedoe.challengeNewcomer("newest comer");
 	janedoe.challengeNewcomer("newest comer");
 
 	std::cout << std::endl << "Sadly, everyone has to die one day" << std::endl;

@@ -1,41 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:28:30 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 17:13:22 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/02 16:19:22 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ScavTrap.hpp"
+# include "ClapTrap.hpp"
 
-	ScavTrap::ScavTrap(void):_name("Samantha")
+	ClapTrap::ClapTrap(void)
 {
 	srand(time(NULL));
-	std::cout << "Soooooo... how are things?" << std::endl;
+	std::cout << "Default constructor." << std::endl;
 }
 
-	ScavTrap::ScavTrap(std::string name):_name(name)
+	ClapTrap::ClapTrap(unsigned int hit, unsigned int mhit, unsigned int nrj,
+unsigned int mnrj, unsigned int lvl, unsigned int melee, unsigned int ranged,
+unsigned int armor, std::string name)
 {
 	srand(time(NULL));
-	std::cout << "Hey, best friend!" << std::endl;
+	std::cout << "Constructor by initialisation" << std::endl;
+
+	_hit = hit;
+	_max_hit = mhit;
+	_energy = nrj;
+	_max_energy = mnrj;
+	_lvl = lvl;
+	_melee = melee;
+	_ranged = ranged;
+	_armor = armor;
+	_name = name;
 }
 
-	ScavTrap::ScavTrap(ScavTrap const &src)
+	ClapTrap::ClapTrap(ClapTrap const &src)
 {
 	*this = src;
-	std::cout << "No way! That's, like, my third favorite kind of magic!" << std::endl;
+	std::cout << "Constructor by copy" << std::endl;
 }
 
-	ScavTrap::~ScavTrap(void)
+	ClapTrap::~ClapTrap(void)
 {
-	std::cout << "Shouldn't you be murdering something about?" << std::endl;
+	std::cout << "Soulless destructor" << std::endl;
 }
 
-ScavTrap	& ScavTrap::operator=(ScavTrap const &src)
+ClapTrap	& ClapTrap::operator=(ClapTrap const &src)
 {
 	_hit = src._hit;
 	_max_hit = src._max_hit;
@@ -50,17 +62,7 @@ ScavTrap	& ScavTrap::operator=(ScavTrap const &src)
 	return *this;
 }
 
-void	ScavTrap::rangedAttack(std::string const & target)
-{
-	std::cout << "Scary ScavTrap " << _name << " doing attacks at range at " << target << " and causing " << _ranged << " points of damage!" << std::endl;
-}
-
-void	ScavTrap::meleeAttack(std::string const & target)
-{
-	std::cout << "Scary ScavTrap " << _name << " doing attacks in a melee at " << target << " and causing " << _melee << " points of damage!" << std::endl;
-}
-
-void	ScavTrap::takeDamage(unsigned int amount)
+void	ClapTrap::takeDamage(unsigned int amount)
 {
 	amount -= _armor;
 	if (amount < 0)
@@ -75,7 +77,7 @@ void	ScavTrap::takeDamage(unsigned int amount)
 		std::cout << "Lucky for you, you still have " << _hit << " hit points" << std::endl;
 }
 
-void	ScavTrap::beRepaired(unsigned int amount)
+void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (amount < 0)
 		amount = 0;
@@ -87,17 +89,4 @@ void	ScavTrap::beRepaired(unsigned int amount)
 		std::cout << "Waouh, you're full alive now." << std::endl;
 	else
 		std::cout << "Feel better? You now have " << _hit << " hit points" << std::endl;
-}
-
-void	ScavTrap::challengeNewcomer(std::string const &target)
-{
-	std::string list_challenge[5] = {"eat more biscuits in a minute.", "do a better scary face.", "spit further.", "speak with a fake brittish accent.", "find a better challenge idea"};
-	std::cout << "Ready for a good challenge? " << std::endl;
-	if (_energy < 25)
-	{
-		std::cout << "I'm out of juice sorry !" << std::endl;
-		return ;
-	}
-	_energy -= 25;
- 	std::cout << _name << " challenge " << target <<" to " << list_challenge[rand() % 5] << std::endl;
 }
