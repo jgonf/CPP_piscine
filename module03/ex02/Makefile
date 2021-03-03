@@ -1,7 +1,7 @@
-NAME		= fragtrap
+NAME		= claptrap
 
 CC		= clang++
-CFLAGS		= -Werror -Wextra -Wall
+CFLAGS		= -Werror -Wextra -Wall --std=c++98
 RM		= rm -rf
 
 DIR_SRCS	= ./
@@ -13,7 +13,7 @@ SRCS		= $(addprefix $(DIR_SRCS), $(F_SRCS))
 
 OBJS		= $(addprefix $(DIR_OBJS), $(F_SRCS:.cpp=.o))
 
-HEADER		= -I $(DIR_INC)
+HEADER		= -I$(DIR_INC)
 
 all:		$(NAME)
 

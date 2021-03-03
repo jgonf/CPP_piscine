@@ -6,21 +6,19 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:28:30 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/03 17:22:15 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/02 17:18:39 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
 
-	ScavTrap::ScavTrap(void): _hit(100), _max_hit(100), _energy(50),
-_max_energy(50), _lvl(1), _melee(20), _ranged(15), _armor(3),_name("Samantha")
+	ScavTrap::ScavTrap(void): ClapTrap(100, 100, 50, 50, 1, 20, 15, 3, "Samantha")
 {
 	srand(time(NULL));
 	std::cout << "Soooooo... how are things?" << std::endl;
 }
 
-	ScavTrap::ScavTrap(std::string name): _hit(100), _max_hit(100), _energy(50),
-_max_energy(50), _lvl(1), _melee(20), _ranged(15), _armor(3),_name(name)
+	ScavTrap::ScavTrap(std::string name): ClapTrap(100, 100, 50, 50, 1, 20, 15, 3, name)
 {
 	srand(time(NULL));
 	std::cout << "Hey, best friend!" << std::endl;
@@ -60,35 +58,6 @@ void	ScavTrap::rangedAttack(std::string const & target)
 void	ScavTrap::meleeAttack(std::string const & target)
 {
 	std::cout << "Scary ScavTrap " << _name << " doing attacks in a melee at " << target << " and causing " << _melee << " points of damage!" << std::endl;
-}
-
-void	ScavTrap::takeDamage(unsigned int amount)
-{
-	amount -= _armor;
-	if (amount < 0)
-		amount = 0;
-	else if (amount > _hit)
-		amount = _hit;
-	_hit -= amount;
-	std::cout << "Oh no! " << _name << " lost " << amount << " points of damage!" << std::endl;
-	if (_hit == 0)
-		std::cout << "Be careful, you don't have hit points anymore." << std::endl;
-	else
-		std::cout << "Lucky for you, you still have " << _hit << " hit points" << std::endl;
-}
-
-void	ScavTrap::beRepaired(unsigned int amount)
-{
-	if (amount < 0)
-		amount = 0;
-	else if (amount + _hit > 100)
-		amount = 100 - _hit;
-	_hit += amount;
-	std::cout << "What a day! " << _name << " just gained " << amount << " points of healing!" << std::endl;
-	if (_hit == 100)
-		std::cout << "Waouh, you're full alive now." << std::endl;
-	else
-		std::cout << "Feel better? You now have " << _hit << " hit points" << std::endl;
 }
 
 void	ScavTrap::challengeNewcomer(std::string const &target)

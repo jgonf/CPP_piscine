@@ -6,21 +6,19 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:28:30 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/03 17:13:52 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/03 22:27:13 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ClapTrap.hpp"
+# include "FragTrap.hpp"
 
-	FragTrap::FragTrap(void): _hit(100), _max_hit(100), _energy(100),
-_max_energy(100), _lvl(1), _melee(30), _ranged(20), _armor(5),_name("Marcel")
+	FragTrap::FragTrap(void): ClapTrap(100, 100, 100, 100, 1, 30, 20, 5, "Marcel")
 {
 	srand(time(NULL));
 	std::cout << "Are... are you my father?" << std::endl;
-
 }
-	FragTrap::FragTrap(std::string name): _hit(100), _max_hit(100), _energy(100),
-_max_energy(100), _lvl(1), _melee(30), _ranged(20), _armor(5), _name(name)
+
+	FragTrap::FragTrap(std::string name): ClapTrap(100, 100, 100, 100, 1, 30, 20, 5, name)
 {
 	srand(time(NULL));
 	std::cout << "Claptrap -- start bootup sequence" << std::endl;
@@ -62,35 +60,6 @@ void	FragTrap::meleeAttack(std::string const & target)
 	std::cout << "FR4G-TP " << _name << " attacks " << target << " in a melee, causing " << _melee << " points of damage!" << std::endl;
 }
 
-void	FragTrap::takeDamage(unsigned int amount)
-{
-	amount -= _armor;
-	if (amount < 0)
-		amount = 0;
-	else if (amount > _hit)
-		amount = _hit;
-	_hit -= amount;
-	std::cout << "Oh no! " << _name << " lost " << amount << " points of damage!" << std::endl;
-	if (_hit == 0)
-		std::cout << "Be careful, you don't have hit points anymore." << std::endl;
-	else
-		std::cout << "Lucky for you, you still have " << _hit << " hit points" << std::endl;
-}
-
-void	FragTrap::beRepaired(unsigned int amount)
-{
-	if (amount < 0)
-		amount = 0;
-	else if (amount + _hit > 100)
-		amount = 100 - _hit;
-	_hit += amount;
-	std::cout << "What a day! " << _name << " just gained " << amount << " points of healing!" << std::endl;
-	if (_hit == 100)
-		std::cout << "Waouh, you're full alive now." << std::endl;
-	else
-		std::cout << "Feel better? You now have " << _hit << " hit points" << std::endl;
-}
-
 void	FragTrap::vaulthunter_dot_exe(std::string const &target)
 {
 	std::string list_attack[5] = {"Senseless Sacrifice", "Shhhh.... Trap!", "Miniontrap", "Laser Inferno", "Clap-In-The-Box"};
@@ -104,4 +73,34 @@ void	FragTrap::vaulthunter_dot_exe(std::string const &target)
 	std::cout << "FR4G-TP " << _name << " did a spectacular " << list_attack[rand() % 5] << " attacks on " << target;
 	std::cout << " causing " << rand() % 40 << " points of damage!" << std::endl;
 	_energy -= 25;
+}
+
+unsigned int	FragTrap::set_hit(void)
+{
+	_hit = 100;
+	return _hit;
+}
+
+unsigned int	FragTrap::set_max_hit(void)
+{
+	_max_hit = 100;
+	return _max_hit;
+
+}
+
+unsigned int	FragTrap::set_ranged(void)
+{
+	_ranged = 20;
+	return _ranged;
+}
+
+unsigned int	FragTrap::set_armor(void)
+{
+	_armor = 5;
+	return _armor;
+}
+
+void	FragTrap::set_name(std::string name)
+{
+	_name = name;
 }

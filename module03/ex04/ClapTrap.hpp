@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:13:17 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/03 17:36:56 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/03 21:44:13 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <stdlib.h>
+# include <time.h>
 
 class ClapTrap {
 
@@ -42,6 +43,7 @@ unsigned int armor, std::string name);
 
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
+		unsigned int	getHit(void);
 };
 
 #endif

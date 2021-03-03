@@ -6,26 +6,26 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:13:17 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 09:13:14 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/03 17:21:13 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
-# include <iostream>
+# include "ClapTrap.hpp"
 
 class ScavTrap {
 
 	private:
-		unsigned int	_hit = 100;
-		unsigned int	_max_hit = 100;
-		unsigned int	_energy = 50;
-		unsigned int	_max_energy = 50;
-		unsigned int	_lvl = 1;
-		unsigned int	_melee = 20;
-		unsigned int	_ranged = 15;
-		unsigned int	_armor = 3;
+		unsigned int	_hit;
+		unsigned int	_max_hit;
+		unsigned int	_energy;
+		unsigned int	_max_energy;
+		unsigned int	_lvl;
+		unsigned int	_melee;
+		unsigned int	_ranged;
+		unsigned int	_armor;
 		std::string	_name;
 
 	public:

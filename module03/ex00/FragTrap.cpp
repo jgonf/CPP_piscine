@@ -6,19 +6,21 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:28:30 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 09:15:55 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/03 16:58:44 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "FragTrap.hpp"
 
-	FragTrap::FragTrap(void): _name("Marcel")
+	FragTrap::FragTrap(void): _hit(100), _max_hit(100), _energy(100),
+_max_energy(100), _lvl(1), _melee(30), _ranged(20), _armor(5),_name("Marcel")
 {
 	srand(time(NULL));
 	std::cout << "Are... are you my father?" << std::endl;
 }
 
-	FragTrap::FragTrap(std::string name): _name(name)
+	FragTrap::FragTrap(std::string name): _hit(100), _max_hit(100), _energy(100),
+_max_energy(100), _lvl(1), _melee(30), _ranged(20), _armor(5), _name(name)
 {
 	srand(time(NULL));
 	std::cout << "Claptrap -- start bootup sequence" << std::endl;

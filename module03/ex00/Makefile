@@ -1,7 +1,7 @@
 NAME		= fragtrap
 
 CC		= clang++
-CFLAGS		= -Werror -Wextra -Wall
+CFLAGS		= -Werror -Wextra -Wall --std=c++98
 RM		= rm -rf
 
 DIR_SRCS	= ./

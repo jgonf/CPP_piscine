@@ -6,13 +6,14 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 21:36:56 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/03 17:37:34 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/03 22:38:17 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 int main()
 {
@@ -46,17 +47,57 @@ int main()
 
 	std::cout << std::endl << "Now come the ScavTrap" << std::endl;
 	ScavTrap janedoe;
+	ScavTrap pampouse;
 	ScavTrap vaness("Vaness");
 	ScavTrap gregory(janedoe);
+	ScavTrap mowg = pampouse;
 	vaness.rangedAttack("the next exercice");
 	gregory.meleeAttack("the next one who ask for fun");
 	vaness.takeDamage(4);
-	vaness.takeDamage(8);
+	mowg.takeDamage(8);
 	vaness.beRepaired(15);
 	vaness.challengeNewcomer("new comer");
 	janedoe.challengeNewcomer("newest comer");
 	janedoe.challengeNewcomer("newest comer");
 	janedoe.challengeNewcomer("newest comer");
+
+	std::cout << std::endl;
+	ClapTrap clap;
+	std::cout << std::endl << "Ninjas just appeared... and dispappeared." << std::endl;
+	NinjaTrap ninj;
+	NinjaTrap korra ("Korra");
+	NinjaTrap avatar (ninj);
+	NinjaTrap aang = ninj;
+	korra.rangedAttack("the first one who don't laugh");
+	avatar.meleeAttack("his own toe by accident");
+	korra.takeDamage(26);
+	avatar.takeDamage(14);
+	aang.beRepaired(15);
+	korra.ninjaShoebox(clap);
+	korra.ninjaShoebox(jdoe);
+	korra.ninjaShoebox(vaness);
+	korra.ninjaShoebox(avatar);
+	korra.ninjaShoebox(clap);
+
+	std::cout << std::endl;
+	std::cout << "Did someone say Super?" << std::endl;
+	SuperTrap sirens;
+	SuperTrap gotham;
+	SuperTrap harley ("HQuinn");
+	SuperTrap ivy (sirens);
+	SuperTrap selina = gotham;
+	sirens.rangedAttack("too tired to think");
+	harley.meleeAttack("the next module");
+	gotham.takeDamage(10);
+	ivy.takeDamage(20);
+	ivy.beRepaired(15);
+	harley.ninjaShoebox(clap);
+	harley.ninjaShoebox(jdoe);
+	harley.ninjaShoebox(vaness);
+	harley.ninjaShoebox(avatar);
+	harley.ninjaShoebox(clap);
+	selina.vaulthunter_dot_exe("42");
+	gotham.vaulthunter_dot_exe("my cat");
 
 	std::cout << std::endl << "Sadly, everyone has to die one day" << std::endl;
 }

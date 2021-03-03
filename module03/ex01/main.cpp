@@ -6,12 +6,11 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 21:36:56 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 17:14:54 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/03 17:07:09 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
 int main()
 {

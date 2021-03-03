@@ -6,26 +6,27 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:13:17 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 09:16:34 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/03 17:18:02 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 
+# include "ClapTrap.hpp"
 # include <iostream>
 
 class FragTrap {
 
 	private:
-		unsigned int	_hit = 100;
-		unsigned int	_max_hit = 100;
-		unsigned int	_energy = 100;
-		unsigned int	_max_energy = 100;
-		unsigned int	_lvl = 1;
-		unsigned int	_melee = 30;
-		unsigned int	_ranged = 20;
-		unsigned int	_armor = 5;
+		unsigned int	_hit;
+		unsigned int	_max_hit;
+		unsigned int	_energy;
+		unsigned int	_max_energy;
+		unsigned int	_lvl;
+		unsigned int	_melee;
+		unsigned int	_ranged;
+		unsigned int	_armor;
 		std::string	_name;
 
 	public:

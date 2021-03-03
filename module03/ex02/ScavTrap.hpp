@@ -6,15 +6,15 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:13:17 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 15:26:38 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/03 17:36:46 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
-# include <iostream>
 # include "ClapTrap.hpp"
+# include <iostream>
 
 class ScavTrap : public ClapTrap {
 

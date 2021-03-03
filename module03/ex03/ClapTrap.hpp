@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 18:13:17 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/02 16:19:03 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/03 17:40:54 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define CLAPTRAP_HPP
 
 # include <iostream>
+# include <stdlib.h>
+# include <time.h>
 
 class ClapTrap {
 
