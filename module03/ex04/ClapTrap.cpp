@@ -15,7 +15,7 @@
 	ClapTrap::ClapTrap(void)
 {
 	srand(time(NULL));
-	std::cout << "Default constructor." << std::endl;
+	std::cout << "Made in ClapTrap." << std::endl;
 }
 
 	ClapTrap::ClapTrap(unsigned int hit, unsigned int mhit, unsigned int nrj,
@@ -23,7 +23,7 @@ unsigned int mnrj, unsigned int lvl, unsigned int melee, unsigned int ranged,
 unsigned int armor, std::string name)
 {
 	srand(time(NULL));
-	std::cout << "Constructor by initialisation" << std::endl;
+	std::cout << "Made in ClapTrap." << std::endl;
 
 	_hit = hit;
 	_max_hit = mhit;
@@ -39,7 +39,7 @@ unsigned int armor, std::string name)
 	ClapTrap::ClapTrap(ClapTrap const &src)
 {
 	*this = src;
-	std::cout << "Constructor by copy" << std::endl;
+	std::cout << "Made in ClapTrap." << std::endl;
 }
 
 	ClapTrap::~ClapTrap(void)

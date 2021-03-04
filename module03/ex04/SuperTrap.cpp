@@ -19,6 +19,7 @@
 	_max_hit = FragTrap::set_max_hit();
 	_energy = NinjaTrap::set_energy();
 	_max_energy = NinjaTrap::set_max_energy();
+	_melee = NinjaTrap::_melee;
 	_melee = NinjaTrap::set_melee();
 	_ranged = FragTrap::set_ranged();
 	_armor = FragTrap::set_armor();
@@ -82,12 +83,3 @@ SuperTrap	& SuperTrap::operator=(SuperTrap const &src)
 	return *this;
 }
 
-void	SuperTrap::rangedAttack(std::string const & target)
-{
-	FragTrap::rangedAttack(target);
-}
-
-void	SuperTrap::meleeAttack(std::string const & target)
-{
-	NinjaTrap::meleeAttack(target);
-}

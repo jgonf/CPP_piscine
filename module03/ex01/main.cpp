@@ -44,12 +44,14 @@ int main()
 
 	std::cout << std::endl << "Now come the ScavTrap" << std::endl;
 	ScavTrap janedoe;
+	ScavTrap pampouse;
 	ScavTrap vaness("Vaness");
 	ScavTrap gregory(janedoe);
+	ScavTrap mowg = pampouse;
 	vaness.rangedAttack("the next exercice");
 	gregory.meleeAttack("the next one who ask for fun");
 	vaness.takeDamage(4);
-	vaness.takeDamage(8);
+	mowg.takeDamage(8);
 	vaness.beRepaired(15);
 	vaness.challengeNewcomer("new comer");
 	janedoe.challengeNewcomer("newest comer");

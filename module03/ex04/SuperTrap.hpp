@@ -29,7 +29,7 @@ class SuperTrap : public FragTrap, public NinjaTrap
 		unsigned int	_armor;
 		unsigned int	_lvl;
 		std::string	_name;
-
+	
 	public:
 		SuperTrap(void);
 		SuperTrap(std::string name);
@@ -37,8 +37,8 @@ class SuperTrap : public FragTrap, public NinjaTrap
 		~SuperTrap(void);
 		SuperTrap & operator=(SuperTrap const &src);
 
-		void	rangedAttack(std::string const & target);
-		void	meleeAttack(std::string const & target);
+		using	FragTrap::rangedAttack;
+		using	NinjaTrap::meleeAttack;
 };
 
 #endif
