@@ -8,7 +8,7 @@ DIR_SRCS	= ./
 DIR_OBJS	= objs/
 DIR_INC		= .
 
-F_SRCS		= Sorcerer.cpp Victim.cpp Peon.cpp main.cpp
+F_SRCS		= Sorcerer.cpp Victim.cpp Peon.cpp Bully.cpp main.cpp
 SRCS		= $(addprefix $(DIR_SRCS), $(F_SRCS))
 
 OBJS		= $(addprefix $(DIR_OBJS), $(F_SRCS:.cpp=.o))

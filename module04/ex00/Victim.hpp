@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Victim.hpp                                       :+:      :+:    :+:   */
+/*   Victim.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 20:02:44 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/04 22:30:51 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/05 21:59:16 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Victim {
 		Victim	& operator=(Victim const & src);
 
 		std::string	get_name(void) const;
-		void		getPolymorphed(void) const;
+		virtual void	getPolymorphed(void) const;
 };
 
 std::ostream & operator<< (std::ostream & o, Victim const & src);

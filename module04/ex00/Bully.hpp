@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Peon.hpp                                           :+:      :+:    :+:   */
+/*   Bully.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 20:02:44 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/05 21:59:04 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/05 22:30:46 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PEON_HPP
-#define PEON_HPP
+#ifndef BULLY_HPP
+#define BULLY_HPP
 
 # include "Victim.hpp"
 # include <iostream>
 
-class Peon : public Victim {
+class Bully : public Victim {
 
 	protected:
-		Peon(void);
+		Bully(void);
 
 	public:
-		Peon(std::string name);
-		Peon(Peon const &src);
-		~Peon(void);
-		Peon	& operator=(Peon const & src);
+		Bully(std::string name);
+		Bully(Bully const &src);
+		~Bully(void);
+		Bully	& operator=(Bully const & src);
 
 		virtual void	getPolymorphed(void) const;
 };

@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Peon.cpp                                           :+:      :+:    :+:   */
+/*   Bully.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 21:33:17 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/05 21:55:33 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/05 22:04:38 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Peon.hpp"
+#include "Bully.hpp"
 
-	Peon::Peon(void): Victim("illegal"){}
+	Bully::Bully(void): Victim("illegal"){}
 
-	Peon::Peon(std::string name): Victim(name)
+	Bully::Bully(std::string name): Victim(name)
 {
-	std::cout << "Zog zog." << std::endl;
+	std::cout << "Hey there!" << std::endl;
 }
 
-	Peon::Peon(Peon const &src): Victim(src)
+	Bully::Bully(Bully const &src): Victim(src)
 {
 	*this = src;
 }
 
-	Peon::~Peon(void)
+	Bully::~Bully(void)
 {
-	std::cout << "Bleuark..." << std::endl;
+	std::cout << "Don't kill me plea" << std::endl;
 }
 
-Peon	&Peon::operator=(Peon const &src)
+Bully	&Bully::operator=(Bully const &src)
 {
 	this->_name = src.get_name();
 	return *this;
 }
 
-void	Peon::getPolymorphed(void)	const
+void	Bully::getPolymorphed(void)	const
 {
-	std::cout << _name << " has been turned into a pink pony!" << std::endl;
+	std::cout << _name << " has been turned into Arthur Dent!" << std::endl;
 }

@@ -6,15 +6,16 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 22:11:36 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/04 22:31:44 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/05 22:34:01 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Sorcerer.hpp"
 #include "Victim.hpp"
 #include "Peon.hpp"
+#include "Bully.hpp"
 
-#include <iostream> 
+#include <iostream>
 
 int main()
 {
@@ -28,20 +29,25 @@ int main()
 	robert.polymorph(jim);
 	robert.polymorph(joe);
 
-	return 0;
-/*
-	Sorcerer merlin(robert);
-	Sorcerer peter("Peter", "the Pan");
+	std::cout << std::endl << "	- Mes tests : -" << std::endl;
+	std::cout << "-> tests forme canonique : " << std::endl;
 
-	robert = peter;
-	std::cout << merlin;
+	Sorcerer merlin(robert);
+	Sorcerer harry("Harry", "the one with the scar");
+	robert = harry;
+
+	std::cout << robert;
 
 	Victim bob("Bob");
 	Victim jenny(bob);
 	Victim raoult("Raoult");
-
 	bob = raoult;
+
 	std::cout << jenny;
-	merlin.polymorph(raoult);
-*/
+
+	std::cout << std::endl << "-> mon autre classe victime : " << std::endl;
+	Bully goerges("Goerges");
+	std::cout << goerges; 
+	harry.polymorph(goerges);
+	std::cout << std::endl;
 }
