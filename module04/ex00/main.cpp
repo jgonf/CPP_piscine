@@ -11,13 +11,37 @@
 /* ************************************************************************** */
 
 #include "Sorcerer.hpp"
+#include "Victim.hpp"
+#include "Peon.hpp"
+
+#include <iostream> 
 
 int main()
 {
 	Sorcerer robert("Robert", "the Magnificient");
+
+	Victim jim("Jimmy");
+	Peon joe("Joe");
+
+	std::cout << robert << jim << joe;
+
+	robert.polymorph(jim);
+	robert.polymorph(joe);
+
+	return 0;
+/*
 	Sorcerer merlin(robert);
 	Sorcerer peter("Peter", "the Pan");
 
 	robert = peter;
 	std::cout << merlin;
+
+	Victim bob("Bob");
+	Victim jenny(bob);
+	Victim raoult("Raoult");
+
+	bob = raoult;
+	std::cout << jenny;
+	merlin.polymorph(raoult);
+*/
 }

@@ -13,11 +13,12 @@
 #ifndef SORCERER_HPP
 #define SORCERER_HPP
 
+# include "Victim.hpp"
 # include <iostream>
 
 class Sorcerer {
 
-	protected:
+	private:
 		std::string	_name;
 		std::string	_title;
 		Sorcerer(void);
@@ -30,8 +31,9 @@ class Sorcerer {
 
 		std::string	get_name(void) const;
 		std::string	get_title(void) const;
+		void		polymorph(Victim const &victim) const;
 };
 
-std::ostream & operator<<(std::string & o, Sorcerer const & src);
+std::ostream & operator<< (std::ostream & o, Sorcerer const & src);
 
 #endif
