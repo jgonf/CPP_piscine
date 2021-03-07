@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PowerFist.cpp                                      :+:      :+:    :+:   */
+/*   ScaryWeapon.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/06 19:08:21 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/07 14:31:16 by jgonfroy         ###   ########.fr       */
+/*   Created: 2021/03/07 14:59:40 by jgonfroy          #+#    #+#             */
+/*   Updated: 2021/03/07 15:33:36 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PowerFist.hpp"
+#include "ScaryWeapon.hpp"
 
-	PowerFist::PowerFist(void): AWeapon("Power Fist", 8, 50) {}
+	ScaryWeapon::ScaryWeapon(void): AWeapon("Scary Weapon", 40, 80) {}
 
-	PowerFist::PowerFist(PowerFist const &src): AWeapon(src) {}
+	ScaryWeapon::ScaryWeapon(ScaryWeapon const &src): AWeapon(src) {}
 
-	PowerFist::~PowerFist(void) {}
+	ScaryWeapon::~ScaryWeapon(void) {}
 
-PowerFist	& PowerFist::operator=(PowerFist const & src)
+ScaryWeapon	& ScaryWeapon::operator=(ScaryWeapon const & src)
 {
 	if (this != &src)
 	{
@@ -29,7 +29,7 @@ PowerFist	& PowerFist::operator=(PowerFist const & src)
 	return *this;
 }
 
-void	PowerFist::attack(void) const
+void	ScaryWeapon::attack(void) const
 {
-	std::cout << "*pschhh... SBAM!*" << std::endl;
+	std::cout << "* bouyah *" << std::endl;
 }

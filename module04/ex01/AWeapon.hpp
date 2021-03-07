@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 22:40:36 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/05 23:27:17 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/06 11:13:58 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class AWeapon
 	public:
 		AWeapon(std::string const & name, int apcost, int damage);
 		AWeapon(AWeapon const &src);
-		virtual ~AWeapon();
+		virtual ~AWeapon(void);
 		AWeapon	& operator=(AWeapon const & src);
 
 		std::string const	getName() const;

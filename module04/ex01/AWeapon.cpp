@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 23:14:40 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/05 23:30:40 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/07 11:34:43 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 	AWeapon::AWeapon(std::string const & name, int apcost, int damage):
 _name(name), _apcost(apcost), _damage(damage) {}
+
+	AWeapon::AWeapon(AWeapon const &src) {*this = src;}
 
 	AWeapon::~AWeapon(void) {}
 

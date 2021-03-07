@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   BadGuy.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/07 10:42:33 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/07 12:18:46 by jgonfroy         ###   ########.fr       */
+/*   Created: 2021/03/07 14:36:32 by jgonfroy          #+#    #+#             */
+/*   Updated: 2021/03/07 15:30:37 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-#define SUPERMUTANT_HPP
+#include "BadGuy.hpp"
 
-# include "Enemy.hpp"
-# include <iostream>
-
-class SuperMutant : public Enemy
+	BadGuy::BadGuy(void): Enemy(50, "Bad Guy")
 {
-	public:
-		SuperMutant(void);
-		SuperMutant(SuperMutant const &src);
-		virtual ~SuperMutant(void);
-		SuperMutant	& operator=(SuperMutant const & src);
+	std::cout << "I'm a bad guy!" << std::endl;
+}
 
-		void virtual takeDamage(int damage);
-};
+	BadGuy::BadGuy(BadGuy const & src): Enemy(src)
+{
+	std::cout << "I'm a bad guy!" << std::endl;
+}
 
-#endif
+	BadGuy::~BadGuy(void)
+{
+	std::cout << "NOOoOOoo..." << std::endl;
+}
+
+BadGuy	&BadGuy::operator=(const	BadGuy &src)
+{
+	(void)src;
+	return *this;
+}
+

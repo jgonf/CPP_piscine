@@ -9,7 +9,7 @@ DIR_OBJS	= objs/
 DIR_INC		= .
 
 F_SRCS		= AWeapon.cpp PlasmaRifle.cpp PowerFist.cpp Enemy.cpp SuperMutant.cpp \
-		RadScorpion.cpp Character.cpp main.cpp
+		RadScorpion.cpp Character.cpp BadGuy.cpp ScaryWeapon.cpp main.cpp
 SRCS		= $(addprefix $(DIR_SRCS), $(F_SRCS))
 
 OBJS		= $(addprefix $(DIR_OBJS), $(F_SRCS:.cpp=.o))
