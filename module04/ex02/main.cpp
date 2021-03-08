@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 20:33:49 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/08 10:20:41 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/08 12:22:35 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,19 @@ int main()
 
 
 	std::cout << std::endl << "-	My test:	-" << std::endl;
+	std::cout << "NULL units or already in units are ignore are not push." << std::endl;
 	ISquad* test = new Squad;
 	ISpaceMarine* arthur = new TacticalMarine;
 	ISpaceMarine* jack = new TacticalMarine;
+	ISpaceMarine* johnny = new TacticalMarine;
 	ISquad*	copy(test);
 
 	std::cout << "There is " << test->getCount() << " in this squad." << std::endl;
 	test->push(arthur);
 	test->push(jack);
+	test->push(jack);
+	test->push(johnny);
+	test->push(NULL);
 	std::cout << "There is " << test->getCount() << " in this squad." << std::endl;
 	std::cout << "There is " << copy->getCount() << " in this copy." << std::endl;
 
