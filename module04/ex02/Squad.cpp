@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 17:13:32 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/07 22:29:53 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/08 10:19:27 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,14 @@ ISpaceMarine*	Squad::getUnit(int n) const
 
 int	Squad::push(ISpaceMarine* unit)
 {
-	_units[_count] = unit;
+	ISpaceMarine** tmp;
+
+	tmp = new ISpaceMarine*[_count + 1];
+	for (int i = 0; i < _count; i++)
+		tmp[i] = _units[i];
+	delete [] _units;
+	tmp[_count] = unit;
+	_units = tmp;
 	_count += 1;
 	return _count;
 }
