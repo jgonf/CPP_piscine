@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 20:02:44 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/05 21:59:16 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/09 10:00:52 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Victim {
 	public:
 		Victim(std::string name);
 		Victim(Victim const &src);
-		~Victim(void);
+		virtual ~Victim(void);
 		Victim	& operator=(Victim const & src);
 
 		std::string	get_name(void) const;

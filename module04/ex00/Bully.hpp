@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 20:02:44 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/05 22:30:46 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/09 09:59:30 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Bully : public Victim {
 	public:
 		Bully(std::string name);
 		Bully(Bully const &src);
-		~Bully(void);
+		virtual ~Bully(void);
 		Bully	& operator=(Bully const & src);
 
 		virtual void	getPolymorphed(void) const;

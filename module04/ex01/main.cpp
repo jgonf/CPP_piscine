@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 14:14:49 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/07 15:53:21 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/09 10:12:43 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,7 @@ int main()
 	me->attack(b);
 	std::cout << *me;
 
-////////////////////////////////////////////
-
+/*
 	std::cout << std::endl << "	-	Mes test:	-" << std::endl;
 
 	Character* pamela = new Character("Pamela");
@@ -74,5 +73,6 @@ int main()
 	delete  pr;
 	delete  pf;
 	delete sw;
+*/
 	return 0;
 }

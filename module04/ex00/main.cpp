@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 22:11:36 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/05 22:34:01 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/09 10:00:20 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main()
 
 	robert.polymorph(jim);
 	robert.polymorph(joe);
-
+/*
 	std::cout << std::endl << "	- Mes tests : -" << std::endl;
 	std::cout << "-> tests forme canonique : " << std::endl;
 
@@ -50,4 +50,5 @@ int main()
 	std::cout << goerges; 
 	harry.polymorph(goerges);
 	std::cout << std::endl;
+*/
 }

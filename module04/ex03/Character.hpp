@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 15:27:16 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/08 17:22:48 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/09 10:59:58 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Character : public ICharacter
 	public:
 		Character(std::string name);
 		Character(Character const & src);
-		~Character(void);
+		virtual ~Character(void);
 		Character &operator=(Character const & src);
 
 		virtual std::string const & getName(void) const;

@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 20:33:49 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/08 12:22:35 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/09 10:47:31 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main()
 	}
 	delete vlc;
 
-
+/*
 	std::cout << std::endl << "-	My test:	-" << std::endl;
 	std::cout << "NULL units or already in units are ignore are not push." << std::endl;
 	ISquad* test = new Squad;
@@ -54,5 +54,6 @@ int main()
 	std::cout << "There is " << overload->getCount() << " after the assignation." << std::endl;
 
 	delete test;
+*/
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 18:14:22 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/08 19:35:13 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/09 11:01:07 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class MateriaSource: public IMateriaSource
 	public:
 		MateriaSource(void);
 		MateriaSource(MateriaSource const &src);
-		~MateriaSource(void);
+		virtual ~MateriaSource(void);
 		MateriaSource	&operator=(MateriaSource const & src);
 
 		void	learnMateria(AMateria* m);

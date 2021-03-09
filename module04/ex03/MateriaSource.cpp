@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 18:32:05 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/08 19:36:19 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/09 11:02:51 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,5 @@ AMateria*	MateriaSource::createMateria(std::string const & type)
 	for (int i = 0; i < 4; i++)
 		if (_invent[i] && _invent[i]->getType() == type)
 			return _invent[i]->clone();
-	return NULL;
+	return 0;
 }
