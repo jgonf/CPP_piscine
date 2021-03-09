@@ -6,11 +6,14 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 18:04:14 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/09 20:04:02 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/09 22:13:58 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+
+//Form coplien
 
 	Bureaucrat::Bureaucrat(void) {}
 
@@ -33,10 +36,12 @@
 	return *this;
 }
 
-
+//Getters
 std::string const	Bureaucrat::getName(void) const {return _name; }
 int			Bureaucrat::getGrade(void) const {return _grade; }
 
+
+//Methods
 void	Bureaucrat::incGrade(void)
 {
 	_grade -= 1;
@@ -49,6 +54,19 @@ void	Bureaucrat::decGrade(void)
 	_grade += 1;
 	if (_grade > 150)
 		throw Bureaucrat::GradeTooHighException();
+}
+
+void	Bureaucrat::signForm(Form &form) const
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << _name << " signs " << form.getName() << std::endl;
+	}
+	catch (std::exception & e)
+	{
+		std::cout << _name << " cannot sign " << form.getName() << " because " << e.what() << std::endl;
+	}
 }
 
 std::ostream &	operator<<(std::ostream & o, Bureaucrat const & src)
