@@ -1,4 +1,4 @@
-NAME		= form
+NAME		= more_forms
 
 CC		= clang++
 CFLAGS		= -Werror -Wextra -Wall -std=c++98
@@ -8,7 +8,7 @@ DIR_SRCS	= ./
 DIR_OBJS	= objs/
 DIR_INC		= .
 
-F_SRCS		= Bureaucrat.cpp Form.cpp main.cpp
+F_SRCS		= Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp main.cpp
 SRCS		= $(addprefix $(DIR_SRCS), $(F_SRCS))
 
 OBJS		= $(addprefix $(DIR_OBJS), $(F_SRCS:.cpp=.o))

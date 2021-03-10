@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 20:50:35 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/10 09:39:36 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/10 19:46:17 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,20 +37,27 @@ _name(src.getName()), _signed(src.getSigned()), _grade_sign(src.getGradeSign()),
 }
 
 
-//Getters
+//Getters and setters
 std::string const	Form::getName(void) const { return _name; }
 bool			Form::getSigned(void) const { return _signed; }
 int 			Form::getGradeSign(void) const { return _grade_sign; }
 int 			Form::getGradeExec(void) const { return _grade_exec; }
 
-
-
+//methods
 void			Form::beSigned(Bureaucrat const & chief)
 {
 	if (_grade_sign < chief.getGrade())
 		throw Form::GradeTooLowException();
-	else
-		_signed = true;
+	_signed = true;
+}
+
+void			Form::execute(Bureaucrat const & executor) const
+{
+	if (_grade_exec < executor.getGrade())
+		throw Form::GradeTooLowException();
+	if (_signed == false)
+		throw Form::NotBeenSigned();
+	execAction();
 }
 
 std::ostream &	operator<<(std::ostream & o, Form const & src)
