@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 10:26:54 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/10 19:48:56 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/10 22:30:39 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ShrubberyCreationForm: public Form
 	public:
 		ShrubberyCreationForm(std::string const target);
 		ShrubberyCreationForm(ShrubberyCreationForm const & form);
-		~ShrubberyCreationForm(void);
+		virtual ~ShrubberyCreationForm(void);
 		ShrubberyCreationForm &operator=(ShrubberyCreationForm const & src);
 
 		std::string	getTarget(void) const;

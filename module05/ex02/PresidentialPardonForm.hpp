@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 10:57:58 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/10 19:48:01 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/10 22:31:06 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class PresidentialPardonForm: public Form
 	public:
 		PresidentialPardonForm(std::string target);
 		PresidentialPardonForm(PresidentialPardonForm const & form);
-		~PresidentialPardonForm(void);
+		virtual ~PresidentialPardonForm(void);
 		PresidentialPardonForm &operator=(PresidentialPardonForm const & form);
 
 		std::string	getTarget(void) const;

@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 20:32:30 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/10 20:19:14 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/10 22:30:24 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Form
 	public:
 		Form(std::string const name, int const sign, int const exec);
 		Form(Form const &src);
-		~Form(void);
+		virtual ~Form(void);
 		Form	&operator=(Form const &src);
 
 		std::string const	getName(void) const;
