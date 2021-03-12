@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 21:32:07 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/11 21:33:49 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/12 10:45:39 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <iostream>
 # include <stdlib.h>
+# include <limits>
+
+# define INT_MAX std::numeric_limits<int>::max()
+# define INT_MIN std::numeric_limits<int>::min()
 
 typedef void (display_arg)(char* arg);
 
