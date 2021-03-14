@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 14:02:31 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/14 11:56:59 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/14 20:15:40 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
 struct	data
 {
 	int		i;
-//	std::string	s1;
-//	std::string	s2;
 	char *s1;
 	char *s2;
 };
