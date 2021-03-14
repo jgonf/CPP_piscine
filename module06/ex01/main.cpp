@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 10:50:51 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/14 20:33:53 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/14 20:50:05 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ void	*serialize(void)
 	return static_cast<void*>(ret);
 }
 
-data	*deserialize(void *raw)
+Data	*deserialize(void *raw)
 {
-	data *res = new data();
+	Data *res = new Data();
 
 	int *ptr;
 	res->s1 = reinterpret_cast<char *>(raw);
@@ -55,7 +55,7 @@ data	*deserialize(void *raw)
 int main(void)
 {
 	void *ptr;
-	data *data;
+	Data *data;
 
 	srand(time(NULL));
 	ptr = serialize();

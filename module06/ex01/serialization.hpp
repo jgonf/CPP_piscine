@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 14:02:31 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/14 20:15:40 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/14 20:49:31 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-struct	data
+struct	Data
 {
 	int		i;
 	char *s1;
