@@ -6,7 +6,7 @@
 /*   By: jgonfroy <jgonfroy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 17:06:54 by jgonfroy          #+#    #+#             */
-/*   Updated: 2021/03/17 18:45:11 by jgonfroy         ###   ########.fr       */
+/*   Updated: 2021/03/19 09:36:53 by jgonfroy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,45 @@ int main()
 	try
 	{
 		std::cout << "Max : " << small.longestSpan() << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	std::cout << std::endl << "Test : add several number a the same time" << std::endl;
+
+	Span addSeveral = Span(3);
+	addSeveral.addNumber(2, 3);
+	std::cout << "Min : " << addSeveral.shortestSpan() << std::endl;
+	std::cout << "Max : " << addSeveral.longestSpan() << std::endl;
+	try
+	{
+		addSeveral.addNumber(2, 3);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+
+	std::cout << std::endl << "Test : add a vector" << std::endl;
+
+	Span addVector = Span(4);
+	std::vector<int> vTest;
+
+	vTest.push_back(0);
+	vTest.push_back(-5);
+	vTest.push_back(15);
+	vTest.push_back(3);
+	addVector.addNumber(vTest);
+	std::cout << "Min : " << addVector.shortestSpan() << std::endl;
+	std::cout << "Max : " << addVector.longestSpan() << std::endl;
+
+	Span smallVec = Span(3);
+	try
+	{
+		smallVec.addNumber(vTest);
 	}
 	catch (std::exception &e)
 	{
